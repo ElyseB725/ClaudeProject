@@ -4,6 +4,7 @@ const scoreEl = document.getElementById("score");
 const bestEl = document.getElementById("best");
 const overlay = document.getElementById("overlay");
 const overlayText = document.getElementById("overlay-text");
+const dpadCenter = document.getElementById("dpad-center");
 
 const CELL = 20;
 const COLS = canvas.width / CELL;
@@ -112,14 +113,25 @@ function startGame() {
   running = true;
   paused = false;
   overlay.classList.add("hidden");
+  dpadCenter.textContent = "⏸";
   restartTimer();
 }
 
 function togglePause() {
   if (!running) return;
   paused = !paused;
-  overlayText.textContent = "Paused &mdash; press Space to resume";
+  overlayText.innerHTML = "Paused &mdash; press Space to resume";
   overlay.classList.toggle("hidden", !paused);
+  dpadCenter.textContent = paused ? "▶" : "⏸";
+}
+
+function requestDirection(dir) {
+  if (!running) {
+    startGame();
+    return;
+  }
+  const isReverse = dir.x === -direction.x && dir.y === -direction.y;
+  if (!isReverse) nextDirection = dir;
 }
 
 const KEY_DIRECTIONS = {
@@ -153,8 +165,28 @@ document.addEventListener("keydown", (e) => {
   const dir = KEY_DIRECTIONS[e.key];
   if (!dir) return;
 
-  const isReverse = dir.x === -direction.x && dir.y === -direction.y;
-  if (!isReverse) nextDirection = dir;
+  requestDirection(dir);
+});
+
+const DPAD_DIRECTIONS = {
+  up: { x: 0, y: -1 },
+  down: { x: 0, y: 1 },
+  left: { x: -1, y: 0 },
+  right: { x: 1, y: 0 },
+};
+
+document.querySelectorAll(".dpad-btn[data-dir]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    requestDirection(DPAD_DIRECTIONS[btn.dataset.dir]);
+  });
+});
+
+dpadCenter.addEventListener("click", () => {
+  if (!running) {
+    startGame();
+  } else {
+    togglePause();
+  }
 });
 
 resetState();

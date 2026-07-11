@@ -16,6 +16,9 @@ body {
 .wrap {
   text-align: center;
   position: relative;
+  max-width: 420px;
+  width: 100%;
+  padding: 0 12px;
 }
 
 h1 {
@@ -26,7 +29,7 @@ h1 {
 .hud {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto 10px;
   font-size: 14px;
   color: #aaa;
@@ -36,11 +39,21 @@ h1 {
   color: #7CFC00;
 }
 
+.board-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
 canvas {
   background: #1e1f26;
   border: 3px solid #333844;
   border-radius: 6px;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hint {
@@ -51,11 +64,7 @@ canvas {
 
 .overlay {
   position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px;
-  height: 400px;
+  inset: 0;
   background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: center;
@@ -69,3 +78,34 @@ canvas {
 .overlay.hidden {
   display: none;
 }
+
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 6px;
+  justify-content: center;
+  margin: 16px auto 0;
+}
+
+.dpad-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #262832;
+  color: #f0f0f0;
+  font-size: 22px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.dpad-btn:active {
+  background: #383c4a;
+}
+
+.dpad-up { grid-column: 2; grid-row: 1; }
+.dpad-left { grid-column: 1; grid-row: 2; }
+.dpad-center { grid-column: 2; grid-row: 2; color: #7CFC00; }
+.dpad-right { grid-column: 3; grid-row: 2; }
+.dpad-down { grid-column: 2; grid-row: 3; }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Snake</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,10 +13,19 @@
       <span>Score: <strong id="score">0</strong></span>
       <span>Best: <strong id="best">0</strong></span>
     </div>
-    <canvas id="board" width="400" height="400"></canvas>
+    <div class="board-wrap">
+      <canvas id="board" width="400" height="400"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-text">Press any arrow key to start</p>
+      </div>
+    </div>
     <p class="hint">Arrow keys / WASD to move &middot; Space to pause &middot; Enter to restart</p>
-    <div id="overlay" class="overlay">
-      <p id="overlay-text">Press any arrow key to start</p>
+    <div class="dpad" aria-label="Touch controls">
+      <button type="button" class="dpad-btn dpad-up" data-dir="up" aria-label="Up">&#9650;</button>
+      <button type="button" class="dpad-btn dpad-left" data-dir="left" aria-label="Left">&#9664;</button>
+      <button type="button" class="dpad-btn dpad-center" id="dpad-center" aria-label="Start or pause">&#9654;</button>
+      <button type="button" class="dpad-btn dpad-right" data-dir="right" aria-label="Right">&#9654;</button>
+      <button type="button" class="dpad-btn dpad-down" data-dir="down" aria-label="Down">&#9660;</button>
     </div>
   </div>
   <script src="script.js"></script>
