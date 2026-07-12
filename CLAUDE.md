@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository overview
 
-This repository currently contains two unrelated projects side by side:
+This repository currently contains three unrelated projects side by side:
 
-- **`snake-game/`** — a standalone, dependency-free browser Snake game (HTML/CSS/JS). This is where all actual development has happened so far.
+- **`snake-game/`** — a standalone, dependency-free browser Snake game (HTML/CSS/JS).
+- **`trip-planner/`** — a Node.js/Express + AI-assisted Europe trip-planning web app. See `trip-planner/CLAUDE.md` for details.
 - **Spring Boot skeleton** (`pom.xml`, `src/`) — a generated, untouched Spring Boot 4.1.0 / Java 26 project (`com.claude.test.claudeproject`). It has no application code beyond the default `@SpringBootApplication` entry point and has not been modified since the initial commit.
 
 When making changes, check which project the request actually concerns — they don't share code or build tooling.
@@ -22,6 +23,14 @@ Plain static site: `index.html`, `style.css`, `script.js`, no build step, no dep
   - `draw()` renders the whole board to the `<canvas>` each tick — there is no diffing, the canvas is fully redrawn.
   - Input is unified through `requestDirection(dir)`, called from both keyboard handlers (arrow keys / WASD) and the on-screen `.dpad-btn` touch controls, so keyboard and touch share the same direction/reverse-prevention logic.
   - Best score persists via `localStorage` (`snake-best`).
+
+## Trip planner (`trip-planner/`)
+
+Node.js/Express app that plans a walking trip in a French village: pick places to visit, choose a starting point, get an auto-generated walking route (split across multiple days if needed) plus a budget breakdown. Village data (places, prices, durations, GPS) is AI-drafted via the Gemini API, verified/enriched against Wikipedia's public REST API for real photos and facts, and then permanently cached to a JSON file per village the first time it's requested — the route and budget math itself is plain deterministic logic, not AI. Needs a backend (unlike `snake-game/`) because the Gemini API key can't be exposed to the browser, and because the route/budget math must run against trusted, stored data. Full architecture and conventions are documented in `trip-planner/CLAUDE.md` — read that before working in this folder.
+
+- **Install**: `npm install` (inside `trip-planner/`)
+- **Configure**: copy `trip-planner/.env.example` to `trip-planner/.env` and set `GEMINI_API_KEY`
+- **Run**: `npm start` inside `trip-planner/`, then open `http://localhost:3000`
 
 ## Spring Boot skeleton (`pom.xml`, `src/`)
 

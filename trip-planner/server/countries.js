@@ -1,0 +1,51 @@
+// Fixed list of European countries for the picker screen — no AI call needed.
+// Add/remove a country by copying one line. `supported` marks which countries
+// actually work end-to-end right now (only France has village data support so far).
+const SUPPORTED_CODES = new Set(["FR"]);
+
+const countries = [
+  { name: "Albania", code: "AL", flag: "🇦🇱" },
+  { name: "Andorra", code: "AD", flag: "🇦🇩" },
+  { name: "Austria", code: "AT", flag: "🇦🇹" },
+  { name: "Belgium", code: "BE", flag: "🇧🇪" },
+  { name: "Bosnia and Herzegovina", code: "BA", flag: "🇧🇦" },
+  { name: "Bulgaria", code: "BG", flag: "🇧🇬" },
+  { name: "Croatia", code: "HR", flag: "🇭🇷" },
+  { name: "Cyprus", code: "CY", flag: "🇨🇾" },
+  { name: "Czech Republic", code: "CZ", flag: "🇨🇿" },
+  { name: "Denmark", code: "DK", flag: "🇩🇰" },
+  { name: "Estonia", code: "EE", flag: "🇪🇪" },
+  { name: "Finland", code: "FI", flag: "🇫🇮" },
+  { name: "France", code: "FR", flag: "🇫🇷" },
+  { name: "Germany", code: "DE", flag: "🇩🇪" },
+  { name: "Greece", code: "GR", flag: "🇬🇷" },
+  { name: "Hungary", code: "HU", flag: "🇭🇺" },
+  { name: "Iceland", code: "IS", flag: "🇮🇸" },
+  { name: "Ireland", code: "IE", flag: "🇮🇪" },
+  { name: "Italy", code: "IT", flag: "🇮🇹" },
+  { name: "Latvia", code: "LV", flag: "🇱🇻" },
+  { name: "Liechtenstein", code: "LI", flag: "🇱🇮" },
+  { name: "Lithuania", code: "LT", flag: "🇱🇹" },
+  { name: "Luxembourg", code: "LU", flag: "🇱🇺" },
+  { name: "Malta", code: "MT", flag: "🇲🇹" },
+  { name: "Moldova", code: "MD", flag: "🇲🇩" },
+  { name: "Monaco", code: "MC", flag: "🇲🇨" },
+  { name: "Montenegro", code: "ME", flag: "🇲🇪" },
+  { name: "Netherlands", code: "NL", flag: "🇳🇱" },
+  { name: "North Macedonia", code: "MK", flag: "🇲🇰" },
+  { name: "Norway", code: "NO", flag: "🇳🇴" },
+  { name: "Poland", code: "PL", flag: "🇵🇱" },
+  { name: "Portugal", code: "PT", flag: "🇵🇹" },
+  { name: "Romania", code: "RO", flag: "🇷🇴" },
+  { name: "San Marino", code: "SM", flag: "🇸🇲" },
+  { name: "Serbia", code: "RS", flag: "🇷🇸" },
+  { name: "Slovakia", code: "SK", flag: "🇸🇰" },
+  { name: "Slovenia", code: "SI", flag: "🇸🇮" },
+  { name: "Spain", code: "ES", flag: "🇪🇸" },
+  { name: "Sweden", code: "SE", flag: "🇸🇪" },
+  { name: "Switzerland", code: "CH", flag: "🇨🇭" },
+  { name: "Ukraine", code: "UA", flag: "🇺🇦" },
+  { name: "United Kingdom", code: "GB", flag: "🇬🇧" },
+].map((c) => ({ ...c, supported: SUPPORTED_CODES.has(c.code) }));
+
+module.exports = countries;

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="app-header">
+      <button id="back-btn" class="back-btn hidden" type="button">&larr; Back</button>
+      <h1>Trip Planner</h1>
+    </header>
+
+    <section id="view-setup" class="view">
+      <p class="subtitle">Plan a walking trip in France</p>
+
+      <label class="field-label" for="country-select">Country</label>
+      <select id="country-select" class="select-input"></select>
+
+      <label class="field-label" for="village-input">City or village</label>
+      <input id="village-input" class="text-input" type="text" list="village-options" placeholder="Pick a country first&hellip;" disabled>
+      <datalist id="village-options"></datalist>
+      <p class="hint-text">Pick a suggestion or type any city/village name.</p>
+
+      <label class="field-label" for="departure-city">Departure city</label>
+      <input id="departure-city" class="text-input" type="text" placeholder="e.g. Paris" value="Paris">
+
+      <label class="field-label">Number of people</label>
+      <div class="counter">
+        <button id="people-minus" class="counter-btn" type="button">&minus;</button>
+        <span id="people-value" class="counter-value">1</span>
+        <button id="people-plus" class="counter-btn" type="button">+</button>
+      </div>
+
+      <label class="field-label" for="hours-per-day">Hours available per day</label>
+      <input id="hours-per-day" class="text-input" type="number" min="1" max="16" value="8">
+
+      <label class="field-label" for="planned-days">Number of days planned on site</label>
+      <input id="planned-days" class="text-input" type="number" min="1" max="30" value="1">
+
+      <button id="setup-next-btn" class="primary-btn" type="button" disabled>Next</button>
+    </section>
+
+    <section id="view-places" class="view hidden">
+      <p class="subtitle">Places to visit in <span id="places-village-name"></span></p>
+
+      <div id="category-chips" class="chip-list"></div>
+
+      <div id="place-list" class="card-grid places-grid"></div>
+
+      <div class="specialties-panel">
+        <p class="specialties-title">Local specialties</p>
+        <p class="specialties-note">Not yet available — this needs real local research before it can be shown here.</p>
+      </div>
+
+      <button id="places-next-btn" class="primary-btn" type="button" disabled>Next</button>
+    </section>
+
+    <section id="view-start" class="view hidden">
+      <p class="subtitle">Where should the route start?</p>
+
+      <div class="radio-group" id="start-options">
+        <label class="radio-option">
+          <input type="radio" name="start-type" value="station" checked>
+          <span>Train / bus station <span id="station-name-hint" class="hint-text"></span></span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="start-type" value="hotel">
+          <span>My hotel</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="start-type" value="landmark">
+          <span>No specific starting point <span class="hint-text">(uses the main landmark)</span></span>
+        </label>
+      </div>
+
+      <div id="hotel-sublist" class="hotel-sublist hidden"></div>
+
+      <button id="generate-btn" class="primary-btn" type="button">Generate itinerary</button>
+    </section>
+
+    <section id="view-results" class="view hidden">
+      <p class="subtitle">Your itinerary for <span id="results-village-name"></span></p>
+
+      <div id="warning-banner" class="warning-banner hidden"></div>
+      <p id="estimated-days-line" class="estimated-days"></p>
+
+      <div id="days-list"></div>
+
+      <div id="budget-panel" class="budget-panel"></div>
+    </section>
+
+    <div id="status" class="status hidden"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

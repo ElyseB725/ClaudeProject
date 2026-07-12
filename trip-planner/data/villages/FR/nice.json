@@ -1,0 +1,446 @@
+{
+  "country": "France",
+  "countryCode": "FR",
+  "name": "Nice",
+  "slug": "nice",
+  "generatedAt": "2026-07-12T19:02:30.986Z",
+  "station": {
+    "name": "Gare de Nice-Ville",
+    "lat": 43.7048,
+    "lon": 7.2619
+  },
+  "places": [
+    {
+      "id": "nice-place-1",
+      "name": "Promenade des Anglais",
+      "description": "Promenade des Anglais is a promenade along the Mediterranean coast of Nice, France. It extends from Nice Côte d'Azur Airport on the west to the Quai des États-Unis on the east, for a distance of approximately 7 kilometres (4.3 mi). It forms part of Route nationale 98, which runs between Toulon and Menton.",
+      "whyVisit": "Stroll along the azure coast, take in the sea breeze, and experience the quintessential spirit of the French Riviera.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 60,
+      "lat": 43.6958,
+      "lon": 7.2651,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/330px-CollineDuChateau_NiceFrance2022.png",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Promenade_des_Anglais",
+      "isLandmark": true,
+      "verified": false
+    },
+    {
+      "id": "nice-place-2",
+      "name": "Colline du Château (Castle Hill)",
+      "description": "A historic hilltop park offering panoramic views over the Baie des Anges, Vieux Nice, and the port, featuring a dramatic artificial waterfall.",
+      "whyVisit": "The absolute best vantage point in Nice for photos, relaxing walks, and viewing the spectacular waterfall.",
+      "categories": [
+        "nature-balade",
+        "monuments"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 90,
+      "lat": 43.6944,
+      "lon": 7.2794,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-3",
+      "name": "Vieux Nice (Old Town)",
+      "description": "A labyrinth of narrow, colorful medieval streets filled with lively plazas, Baroque churches, and artisanal boutiques.",
+      "whyVisit": "To immerse yourself in the historic Italian-influenced architecture, try local street food, and feel the vibrant neighborhood energy.",
+      "categories": [
+        "nature-balade",
+        "artisanat-local"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 120,
+      "lat": 43.6969,
+      "lon": 7.2774,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-4",
+      "name": "Cours Saleya Flower Market",
+      "description": "A bustling open-air market in the heart of the Old Town, selling fresh flowers, local produce, and Niçois specialties like socca.",
+      "whyVisit": "To experience the vibrant colors, delightful scents, and local culinary artisan craft of the French Riviera.",
+      "categories": [
+        "artisanat-local",
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 45,
+      "lat": 43.6958,
+      "lon": 7.2755,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-5",
+      "name": "Musée Matisse",
+      "description": "A 17th-century Genoese villa in the Cimiez district housing an extensive collection of works by French artist Henri Matisse.",
+      "whyVisit": "Trace the artistic evolution of one of modern art's most celebrated masters in the city where he lived and died.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 90,
+      "lat": 43.7194,
+      "lon": 7.2761,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-6",
+      "name": "Musée Marc Chagall",
+      "description": "The Marc Chagall National Museum is a French national museum dedicated to the work of painter Marc Chagall – particularly his works inspired by religion – located in Nice in the Alpes-Maritimes.",
+      "whyVisit": "Admire the incredible stained-glass windows and monumental paintings designed by Chagall himself to fit this exact venue.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 75,
+      "lat": 43.70916667,
+      "lon": 7.26953611,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Mus%C3%A9e_Marc_Chagall.jpg/330px-Mus%C3%A9e_Marc_Chagall.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Marc_Chagall",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-7",
+      "name": "Place Masséna",
+      "description": "The Place Masséna is a historic square in Nice, Alpes-Maritimes, France. It was named for André Masséna. Its layout was designed by Joseph Vernier in 1843-1844.",
+      "whyVisit": "It is the vibrant, beating heart of the city connecting the old town with the modern high street, perfect for people watching.",
+      "categories": [
+        "monuments",
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 30,
+      "lat": 43.6973,
+      "lon": 7.2701,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Place-Mass%C3%A9na_01.jpg/330px-Place-Mass%C3%A9na_01.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Place_Mass%C3%A9na",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-8",
+      "name": "Promenade du Paillon (Coulée Verte)",
+      "description": "A sprawling, modern urban park featuring water mirror fountains, playgrounds, and botanical species from all over the world.",
+      "whyVisit": "A refreshing green escape in the middle of the city with fantastic play areas and misting fountains for hot days.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 60,
+      "lat": 43.6991,
+      "lon": 7.273,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-9",
+      "name": "MAMAC (Musée d'Art Moderne et d'Art Contemporain)",
+      "description": "An avant-garde architectural monument housing masterpieces of European and American contemporary art from the 1950s to the present.",
+      "whyVisit": "Explore works by local stars Yves Klein and Niki de Saint Phalle, and enjoy 360-degree views of Nice from the rooftop walkway.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 90,
+      "lat": 43.7013,
+      "lon": 7.2785,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-10",
+      "name": "Cathédrale Sainte-Réparate",
+      "description": "A breathtaking 17th-century Baroque cathedral located in Vieux Nice, dedicated to the patron saint of the city.",
+      "whyVisit": "Marvel at the ornate interior plasterwork, gold gilding, ten beautiful chapels, and the prominent tiled dome visible from the hills.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 30,
+      "lat": 43.6972,
+      "lon": 7.2762,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-11",
+      "name": "Palais Lascaris",
+      "description": "A magnificent 17th-century aristocratic mansion in Vieux Nice displaying monumental frescoes, tapestries, and a rare collection of historical musical instruments.",
+      "whyVisit": "Step back in time to the height of Genoese Baroque opulence in a beautifully restored noble palace.",
+      "categories": [
+        "musees-art",
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 60,
+      "lat": 43.6977,
+      "lon": 7.2774,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-12",
+      "name": "Villa Masséna Musée",
+      "description": "An elegant Belle Époque mansion on the Promenade des Anglais showing the glamorous history of Riviera tourism and Napoleon's local ties.",
+      "whyVisit": "See Josephine’s golden tiara and explore the history of Nice from its 19th-century boom to its transition into a winter resort capital.",
+      "categories": [
+        "musees-art",
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 75,
+      "lat": 43.6946,
+      "lon": 7.2583,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-13",
+      "name": "Port Lympia (Nice Port)",
+      "description": "The historic harbor of Nice, featuring colorful Venetian-style facades, grand yachts, and traditional wooden pointu fishing boats.",
+      "whyVisit": "Walk the scenic docks, watch local fisherman unload their catch, and admire the upscale yachts contrasting with historic architecture.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 45,
+      "lat": 43.6976,
+      "lon": 7.2848,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-14",
+      "name": "Parc Phoenix",
+      "description": "A 7-hectare botanical and animal park with one of the largest greenhouses in Europe, showcasing various tropical ecosystems.",
+      "whyVisit": "A paradise for children featuring free-roaming exotic birds, small mammals, rare orchids, and an adventure play area.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 5.2,
+      "entryPriceLabel": null,
+      "durationMinutes": 120,
+      "lat": 43.6685,
+      "lon": 7.2185,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-15",
+      "name": "Basilique Notre-Dame de l'Assomption",
+      "description": "An imposing 19th-century neo-Gothic basilica on Avenue Jean Médecin, featuring elegant twin towers and striking stained glass windows.",
+      "whyVisit": "The largest church in Nice, displaying a stark, beautiful contrast to the city's ubiquitous Italian Baroque style.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 30,
+      "lat": 43.7034,
+      "lon": 7.2662,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-16",
+      "name": "Chez René Socca",
+      "description": "A legendary historic eatery in Old Nice famous for its traditional Niçois street food including socca (chickpea pancake) and pissaladière.",
+      "whyVisit": "The most authentic, casual spot to try Niçois specialty cuisine fresh from the wood-fired ovens.",
+      "categories": [
+        "restaurants",
+        "artisanat-local"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 5,
+      "entryPriceLabel": null,
+      "durationMinutes": 45,
+      "lat": 43.6983,
+      "lon": 7.2778,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-17",
+      "name": "Opéra de Nice",
+      "description": "A prestigious, ornate 19th-century Italianate opera house located near the seafront, offering classical performances.",
+      "whyVisit": "To appreciate world-class opera, ballet, or symphonic performances within a majestic historic auditorium with unparalleled acoustics.",
+      "categories": [
+        "spectacles",
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 20,
+      "entryPriceLabel": null,
+      "durationMinutes": 150,
+      "lat": 43.6958,
+      "lon": 7.2728,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-18",
+      "name": "La Crypte Archéologique de Nice",
+      "description": "An immense underground chamber discovered during tram excavations, preserving the 14th-century fortifications of the city.",
+      "whyVisit": "Walk over elevated metal gantries to view remarkably preserved historical ramparts underneath the modern city streets.",
+      "categories": [
+        "monuments",
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 6,
+      "entryPriceLabel": null,
+      "durationMinutes": 60,
+      "lat": 43.7009,
+      "lon": 7.2796,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-19",
+      "name": "Le Negresco",
+      "description": "The legendary palatial hotel overlooking the sea, a majestic showcase of Belle Époque architecture housing museum-quality art.",
+      "whyVisit": "Even if you are not staying, viewing this national historic monument's pink dome and ornate facades from the outside is a visual treat.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 15,
+      "lat": 43.6943,
+      "lon": 7.2579,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "nice-place-20",
+      "name": "Cave de la Tour",
+      "description": "One of the oldest bistros and wine cellars in Nice, offering local wines and a vintage neighborhood atmosphere.",
+      "whyVisit": "Taste rare local wines from Bellet under wood beams in a cozy, authentic Niçois pub dating back to 1947.",
+      "categories": [
+        "bars",
+        "artisanat-local"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 60,
+      "lat": 43.6978,
+      "lon": 7.277,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    }
+  ],
+  "hotels": [
+    {
+      "id": "nice-hotel-1",
+      "name": "Le Negresco",
+      "lat": 43.6943,
+      "lon": 7.2583,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "nice-hotel-2",
+      "name": "Hyatt Regency Nice Palais de la Méditerranée",
+      "lat": 43.6949,
+      "lon": 7.2638,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "nice-hotel-3",
+      "name": "Boscolo Nice Hotel & Spa",
+      "lat": 43.7005,
+      "lon": 7.268,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "nice-hotel-4",
+      "name": "Hotel Windsor",
+      "lat": 43.6968,
+      "lon": 7.2612,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "nice-hotel-5",
+      "name": "Hotel La Pérouse Nice Baie des Anges",
+      "lat": 43.6946,
+      "lon": 7.2801,
+      "photoUrl": null,
+      "verified": false
+    }
+  ]
+}

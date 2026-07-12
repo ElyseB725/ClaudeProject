@@ -1,0 +1,404 @@
+{
+  "country": "France",
+  "countryCode": "FR",
+  "name": "Colmar",
+  "slug": "colmar",
+  "generatedAt": "2026-07-12T13:56:39.668Z",
+  "station": {
+    "name": "Gare de Colmar",
+    "lat": 48.0728,
+    "lon": 7.3472
+  },
+  "places": [
+    {
+      "id": "colmar-place-1",
+      "name": "La Petite Venise",
+      "description": "A picturesque area of Colmar with colorful half-timbered houses lining the Lauch River canal, once inhabited by a community of boatmen and fishmongers.",
+      "whyVisit": "It is the quintessential picture-postcard sight of Alsace, offering peaceful canal views and beautiful floral displays.",
+      "categories": [
+        "nature-balade",
+        "monuments"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 60,
+      "lat": 48.0738,
+      "lon": 7.3592,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": true,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-2",
+      "name": "Musée Unterlinden",
+      "description": "The Unterlinden Museum is located in Colmar, in the Alsace region of France. The museum, housed in a 13th-century Dominican religious sisters' convent and a 1906 former public baths building, is home to the Isenheim Altarpiece by the German Renaissance painter Matthias Grünewald and features a large collection of local and international artworks and manufactured artifacts from prehistorical to contemporary times. It is a Musée de France. With roughly 200,000 visitors per year, the museum is the most visited in Alsace.",
+      "whyVisit": "To admire Matthias Grünewald's masterpiece altarpiece and a vast collection of medieval and modern art.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 13,
+      "entryPriceLabel": null,
+      "durationMinutes": 120,
+      "lat": 48.07972222,
+      "lon": 7.35555556,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mus%C3%A9e_d%27Unterlinden_Colmar.jpg/330px-Mus%C3%A9e_d%27Unterlinden_Colmar.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Unterlinden_Museum",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-3",
+      "name": "Collégiale Saint-Martin",
+      "description": "The Église Saint-Martin is a Roman Catholic church located in Colmar, Haut-Rhin, France. It is in the principal Gothic architectural style. Because of its past as a collegiate church, is also known als Collégiale Saint-Martin, and because of its large dimensions, as Cathédrale Saint-Martin, although Colmar had never been the seat of a bishopric.",
+      "whyVisit": "To appreciate the striking Gothic architecture, medieval stained-glass windows, and beautiful roof tiles.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 30,
+      "lat": 48.07722222,
+      "lon": 7.35833333,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/St_Martin%27s_Church_%2852168207342%29.jpg/330px-St_Martin%27s_Church_%2852168207342%29.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/St_Martin's_Church%2C_Colmar",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-4",
+      "name": "Maison Pfister",
+      "description": "One of the most famous Renaissance-style houses in Colmar, built in 1537 for a hatter with a wooden gallery and octagonal turret.",
+      "whyVisit": "It is a stunning example of Alsatian architectural renaissance, showcasing ornate exterior murals depicting biblical and secular scenes.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 15,
+      "lat": 48.0768,
+      "lon": 7.3578,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-5",
+      "name": "Koïfhus",
+      "description": "Ancienne Douane, also known as Koïfhus, is a Gothic and Renaissance building in Colmar, France. It is classified as a monument historique by the French Ministry of Culture since 1930. It is also the birthplace of general Jean Rapp.",
+      "whyVisit": "To walk under its historic passageway and admire the beautiful green and red glazed roof tiles in the heart of old Colmar.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 20,
+      "lat": 48.07583333,
+      "lon": 7.35888889,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Colmar_%28Haut-Rhin%29_-_Ko%C3%AFfhus_%28ancienne_douane%29_%28fa%C3%A7ade_ouest%29.jpg/330px-Colmar_%28Haut-Rhin%29_-_Ko%C3%AFfhus_%28ancienne_douane%29_%28fa%C3%A7ade_ouest%29.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ancienne_Douane%2C_Colmar",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-6",
+      "name": "Musée Bartholdi",
+      "description": "The Musée Bartholdi is a museum dedicated to French sculptor Auguste Bartholdi and is situated at 30 rue des Marchands in Colmar, at the artist's birthplace. The museum has the \"Musée de France\" label. In 2011, the building was labeled \"Maisons des Illustres\" by the Ministry of Culture and Communication. In the courtyard there is a statue named Statue des grands soutiens du monde. Two doors of the 17th century were registered as a monument historique on 18 June 1926. In 2012, the museum had over 16,000 visitors.",
+      "whyVisit": "To explore original models, drawings, and personal objects relating to the creation of the Statue of Liberty and other prominent works.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 5,
+      "entryPriceLabel": null,
+      "durationMinutes": 60,
+      "lat": 48.076685,
+      "lon": 7.357726,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Bartoldi-Museum.JPG/330px-Bartoldi-Museum.JPG",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Bartholdi",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-7",
+      "name": "Champ de Mars",
+      "description": "The Champ de Mars is a large public greenspace in Paris, France, located in the seventh arrondissement, between the Eiffel Tower to the northwest and the École Militaire to the southeast. The park is named after the Campus Martius in Rome, which was dedicated to the god Mars. The name alludes to the fact that the lawns here were formerly used as drilling and marching grounds by the French military.",
+      "whyVisit": "Perfect for a relaxing walk, a picnic, or letting children play on the carousel and playground.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 45,
+      "lat": 48.85611111,
+      "lon": 2.29833333,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/MG-Paris-Champ_de_Mars.jpg/330px-MG-Paris-Champ_de_Mars.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Champ_de_Mars",
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-8",
+      "name": "Marché Couvert de Colmar",
+      "description": "A historic brick and stone indoor market hall from 1865, filled with vendors selling fresh regional food and artisanal items.",
+      "whyVisit": "To taste local specialties such as pretzels, Munster cheese, and tarts, and experience authentic local daily life.",
+      "categories": [
+        "artisanat-local",
+        "restaurants"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 45,
+      "lat": 48.0746,
+      "lon": 7.3597,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-9",
+      "name": "Musée du Jouet",
+      "description": "A whimsical museum showcasing an extensive collection of historic toys, train sets, dolls, and board games from the 19th century to today.",
+      "whyVisit": "An nostalgic and highly engaging experience for children and adults alike with interactive displays and vintage games.",
+      "categories": [
+        "musees-art"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 6,
+      "entryPriceLabel": null,
+      "durationMinutes": 90,
+      "lat": 48.0792,
+      "lon": 7.3598,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-10",
+      "name": "Maison des Têtes",
+      "description": "An outstanding Renaissance building built in 1609, adorned with 106 small stone heads or masks on its facade and a statue of a cooper on the gable.",
+      "whyVisit": "To marvel at the grotesque and fascinating stone faces carved into the window frames and bay window.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 15,
+      "lat": 48.0783,
+      "lon": 7.3559,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-11",
+      "name": "Fontaine Schwendi",
+      "description": "A landmark fountain sculpted by Auguste Bartholdi featuring a bronze statue of Lazarus von Schwendi holding a grapevine.",
+      "whyVisit": "A great photo opportunity that celebrates the introduction of Tokay grapevines to the Alsace wine region.",
+      "categories": [
+        "monuments"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 10,
+      "lat": 48.076,
+      "lon": 7.3594,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-12",
+      "name": "Église des Dominicains",
+      "description": "A beautiful 14th-century monastery church that showcases the world-famous painting 'Madonna of the Rose Bush' by Martin Schongauer.",
+      "whyVisit": "To experience the serene, mystical atmosphere and view outstanding medieval religious artwork.",
+      "categories": [
+        "monuments",
+        "musees-art"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 2,
+      "entryPriceLabel": null,
+      "durationMinutes": 30,
+      "lat": 48.0781,
+      "lon": 7.3569,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-13",
+      "name": "Parc de la Lauch",
+      "description": "A quiet, lush green park space situated alongside the Lauch canal, offering a peaceful escape from the busy tourist center.",
+      "whyVisit": "Excellent for a tranquil nature walk under the canopy of mature trees right beside the flowing water.",
+      "categories": [
+        "nature-balade"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 40,
+      "lat": 48.0712,
+      "lon": 7.3621,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-14",
+      "name": "Choco-Story Colmar",
+      "description": "An interactive chocolate museum tracing 5,000 years of cocoa history with demonstrations, virtual reality, and tasting rooms.",
+      "whyVisit": "A deliciously sweet experience where you can craft your own chocolate and taste fresh creations.",
+      "categories": [
+        "musees-art",
+        "artisanat-local"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 10,
+      "entryPriceLabel": null,
+      "durationMinutes": 75,
+      "lat": 48.0786,
+      "lon": 7.3601,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-15",
+      "name": "Winstub Brenner",
+      "description": "A traditional, cozy Alsatian winstub tavern located in the heart of the Little Venice district serving authentic local gastronomy.",
+      "whyVisit": "To enjoy classic local specialties such as Choucroute garnie or Baeckeoffe in a warm, historic timbered setting.",
+      "categories": [
+        "restaurants",
+        "bars"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 90,
+      "lat": 48.0739,
+      "lon": 7.3594,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-16",
+      "name": "Théâtre Municipal de Colmar",
+      "description": "A beautiful 19th-century theater building showcasing neo-classical architecture on the edge of the historic old town.",
+      "whyVisit": "To admire the external historic architecture or catch a seasonal French production or classical music performance.",
+      "categories": [
+        "spectacles"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 45,
+      "lat": 48.0792,
+      "lon": 7.3547,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-17",
+      "name": "Quai de la Poissonnerie",
+      "description": "The scenic riverside quay formerly used by professional fishermen to store and sell their daily catches.",
+      "whyVisit": "It offers the ultimate postcard perspective of traditional timbered homes framing the gentle river.",
+      "categories": [
+        "nature-balade",
+        "monuments"
+      ],
+      "kidFriendly": true,
+      "entryPrice": 0,
+      "entryPriceLabel": "Open access",
+      "durationMinutes": 20,
+      "lat": 48.0743,
+      "lon": 7.3598,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    },
+    {
+      "id": "colmar-place-18",
+      "name": "La Cour des Anges",
+      "description": "A charming, hidden courtyard of local craft shops and galleries specializing in handcrafted wooden toys, pottery, and regional fabrics.",
+      "whyVisit": "Perfect for finding high-quality, authentic souvenirs handmade by local Alsatian artisans.",
+      "categories": [
+        "artisanat-local"
+      ],
+      "kidFriendly": false,
+      "entryPrice": 0,
+      "entryPriceLabel": "Free",
+      "durationMinutes": 30,
+      "lat": 48.0765,
+      "lon": 7.3585,
+      "photoUrl": null,
+      "sourceUrl": null,
+      "isLandmark": false,
+      "verified": false
+    }
+  ],
+  "hotels": [
+    {
+      "id": "colmar-hotel-1",
+      "name": "La Maison des Têtes",
+      "lat": 48.0786,
+      "lon": 7.3558,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "colmar-hotel-2",
+      "name": "Hôtel Le Maréchal",
+      "lat": 48.0737,
+      "lon": 7.3592,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "colmar-hotel-3",
+      "name": "Grand Hôtel Bristol",
+      "lat": 48.0724,
+      "lon": 7.3472,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "colmar-hotel-4",
+      "name": "Hôtel Saint-Martin",
+      "lat": 48.0763,
+      "lon": 7.3579,
+      "photoUrl": null,
+      "verified": false
+    },
+    {
+      "id": "colmar-hotel-5",
+      "name": "James Boutique Hôtel",
+      "lat": 48.0811,
+      "lon": 7.3621,
+      "photoUrl": null,
+      "verified": false
+    }
+  ]
+}
