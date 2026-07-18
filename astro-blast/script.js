@@ -165,9 +165,14 @@ function moveEntity(entity, dir, speed, isPlayer) {
   entity.dir = dir;
 
   if (isPlayer && player.escapeCol !== null) {
-    const col = Math.floor((entity.x + entity.size / 2) / CELL);
-    const row = Math.floor((entity.y + entity.size / 2) / CELL);
-    if (col !== player.escapeCol || row !== player.escapeRow) {
+    const cellLeft = player.escapeCol * CELL;
+    const cellTop = player.escapeRow * CELL;
+    const stillOverlapping =
+      entity.x < cellLeft + CELL &&
+      entity.x + entity.size > cellLeft &&
+      entity.y < cellTop + CELL &&
+      entity.y + entity.size > cellTop;
+    if (!stillOverlapping) {
       player.escapeCol = null;
       player.escapeRow = null;
     }
