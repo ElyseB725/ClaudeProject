@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0e1016;
+  color: #f0f0f0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.wrap {
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  padding: 0 12px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  letter-spacing: 2px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  max-width: 480px;
+  margin: 0 auto 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.hud strong {
+  color: #ffb347;
+}
+
+.board-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 480 / 416;
+  margin: 0 auto;
+}
+
+canvas {
+  background: #1e1f26;
+  border: 3px solid #333844;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hint {
+  color: #777;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px auto 0;
+  flex-wrap: wrap;
+}
+
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.dpad-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #262832;
+  color: #f0f0f0;
+  font-size: 20px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.dpad-btn:active {
+  background: #383c4a;
+}
+
+.dpad-up { grid-column: 2; grid-row: 1; }
+.dpad-left { grid-column: 1; grid-row: 2; }
+.dpad-center { grid-column: 2; grid-row: 2; color: #ffb347; }
+.dpad-right { grid-column: 3; grid-row: 2; }
+.dpad-down { grid-column: 2; grid-row: 3; }
+
+#bomb-btn {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 50%;
+  background: #4a1f1f;
+  color: #ff8a5c;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+#bomb-btn span {
+  font-size: 12px;
+  color: #f0f0f0;
+}
+
+#bomb-btn:active {
+  background: #632a2a;
+}

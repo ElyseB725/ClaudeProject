@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository overview
 
-This repository currently contains three unrelated projects side by side:
+This repository currently contains four unrelated projects side by side:
 
 - **`snake-game/`** — a standalone, dependency-free browser Snake game (HTML/CSS/JS).
+- **`astro-blast/`** — a standalone, dependency-free browser bomb-em-up (HTML/CSS/JS). See `astro-blast/CLAUDE.md` for details.
 - **`trip-planner/`** — a Node.js/Express + AI-assisted Europe trip-planning web app. See `trip-planner/CLAUDE.md` for details.
 - **Spring Boot skeleton** (`pom.xml`, `src/`) — a generated, untouched Spring Boot 4.1.0 / Java 26 project (`com.claude.test.claudeproject`). It has no application code beyond the default `@SpringBootApplication` entry point and has not been modified since the initial commit.
 
@@ -23,6 +24,13 @@ Plain static site: `index.html`, `style.css`, `script.js`, no build step, no dep
   - `draw()` renders the whole board to the `<canvas>` each tick — there is no diffing, the canvas is fully redrawn.
   - Input is unified through `requestDirection(dir)`, called from both keyboard handlers (arrow keys / WASD) and the on-screen `.dpad-btn` touch controls, so keyboard and touch share the same direction/reverse-prevention logic.
   - Best score persists via `localStorage` (`snake-best`).
+
+## Astro Blast (`astro-blast/`)
+
+Plain static site: `index.html`, `style.css`, `script.js`, no build step, no dependencies, no bundler. An astronaut drops bombs to clear destructible bricks and take out wandering aliens.
+
+- **Run it**: open `astro-blast/index.html` directly in a browser, or serve the folder with any static file server (e.g. `npx serve astro-blast`).
+- **Architecture**: continuous pixel-based movement via `requestAnimationFrame`, unlike Snake's grid-tick `setInterval` loop — see `astro-blast/CLAUDE.md` for the full breakdown (grid generation, bomb/explosion/chain-reaction logic, enemy AI, power-ups).
 
 ## Trip planner (`trip-planner/`)
 

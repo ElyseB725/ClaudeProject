@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astro Blast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Astro Blast</h1>
+    <div class="hud">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Lives: <strong id="lives">3</strong></span>
+      <span>Level: <strong id="level">1</strong></span>
+      <span>Best: <strong id="best">0</strong></span>
+    </div>
+    <div class="board-wrap">
+      <canvas id="board" width="480" height="416"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-text">Press Enter to start<br>Blast bricks, dodge aliens, don't get caught in your own bomb</p>
+      </div>
+    </div>
+    <p class="hint">Arrow keys / WASD to move &middot; Space to drop a bomb &middot; P to pause &middot; Enter to restart</p>
+    <div class="controls">
+      <div class="dpad" aria-label="Touch controls">
+        <button type="button" class="dpad-btn dpad-up" data-dir="up" aria-label="Up">&#9650;</button>
+        <button type="button" class="dpad-btn dpad-left" data-dir="left" aria-label="Left">&#9664;</button>
+        <button type="button" class="dpad-btn dpad-center" id="dpad-center" aria-label="Start or pause">&#9654;</button>
+        <button type="button" class="dpad-btn dpad-right" data-dir="right" aria-label="Right">&#9654;</button>
+        <button type="button" class="dpad-btn dpad-down" data-dir="down" aria-label="Down">&#9660;</button>
+      </div>
+      <button type="button" id="bomb-btn" aria-label="Drop bomb">&#128163;<span>Bomb</span></button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
