@@ -6,15 +6,23 @@
 <title>ClaudeProject Games</title>
 <style>
   * { box-sizing: border-box; }
+  html, body {
+    height: 100%;
+  }
   body {
     margin: 0;
+    background: #0e1016;
+    color: #f0f0f0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  #menu-view {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0e1016;
-    color: #f0f0f0;
-    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  #menu-view.hidden {
+    display: none;
   }
   .wrap {
     text-align: center;
@@ -31,7 +39,7 @@
     flex-direction: column;
     gap: 16px;
   }
-  a.card {
+  button.card {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -39,12 +47,15 @@
     border: 3px solid #333844;
     border-radius: 10px;
     padding: 18px 20px;
-    text-decoration: none;
     color: #f0f0f0;
     text-align: left;
+    font: inherit;
+    cursor: pointer;
     transition: border-color 0.15s;
+    width: 100%;
   }
-  a.card:hover {
+  button.card:hover,
+  button.card:focus-visible {
     border-color: #ffb347;
   }
   .card .icon {
@@ -59,27 +70,84 @@
     font-size: 13px;
     color: #aaa;
   }
+  #game-view {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+  }
+  #game-view.active {
+    display: flex;
+  }
+  #back-btn {
+    flex: 0 0 auto;
+    margin: 10px;
+    align-self: flex-start;
+    background: #1e1f26;
+    border: 2px solid #333844;
+    border-radius: 8px;
+    color: #f0f0f0;
+    font: inherit;
+    font-size: 14px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  #back-btn:hover {
+    border-color: #ffb347;
+  }
+  #game-frame {
+    flex: 1 1 auto;
+    width: 100%;
+    border: none;
+  }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>ClaudeProject Games</h1>
-    <div class="cards">
-      <a class="card" href="astro-blast/index.html">
-        <span class="icon">&#128163;</span>
-        <span>
-          <h2>Astro Blast</h2>
-          <p>Drop bombs to clear bricks and take out wandering aliens.</p>
-        </span>
-      </a>
-      <a class="card" href="snake-game/index.html">
-        <span class="icon">&#128013;</span>
-        <span>
-          <h2>Snake</h2>
-          <p>The classic — grow your snake, don't hit the walls or yourself.</p>
-        </span>
-      </a>
+  <div id="menu-view">
+    <div class="wrap">
+      <h1>ClaudeProject Games</h1>
+      <div class="cards">
+        <button type="button" class="card" data-src="astro-blast/index.html">
+          <span class="icon">&#128163;</span>
+          <span>
+            <h2>Astro Blast</h2>
+            <p>Drop bombs to clear bricks and take out wandering aliens.</p>
+          </span>
+        </button>
+        <button type="button" class="card" data-src="snake-game/index.html">
+          <span class="icon">&#128013;</span>
+          <span>
+            <h2>Snake</h2>
+            <p>The classic — grow your snake, don't hit the walls or yourself.</p>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
+
+  <div id="game-view">
+    <button type="button" id="back-btn">&#8249; Menu</button>
+    <iframe id="game-frame" title="Game"></iframe>
+  </div>
+
+  <script>
+    const menuView = document.getElementById("menu-view");
+    const gameView = document.getElementById("game-view");
+    const gameFrame = document.getElementById("game-frame");
+    const backBtn = document.getElementById("back-btn");
+
+    document.querySelectorAll(".card").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        gameFrame.src = btn.dataset.src;
+        menuView.classList.add("hidden");
+        gameView.classList.add("active");
+      });
+    });
+
+    backBtn.addEventListener("click", () => {
+      gameFrame.src = "about:blank";
+      gameView.classList.remove("active");
+      menuView.classList.remove("hidden");
+    });
+  </script>
 </body>
 </html>
