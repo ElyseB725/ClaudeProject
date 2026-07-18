@@ -82,6 +82,44 @@ canvas {
   display: none;
 }
 
+.character-select {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.character-select.hidden {
+  display: none;
+}
+
+.char-btn {
+  width: 84px;
+  height: 84px;
+  border: 2px solid #333844;
+  border-radius: 10px;
+  background: #262832;
+  color: #f0f0f0;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.char-btn span {
+  font-size: 12px;
+}
+
+.char-btn:active,
+.char-btn.selected {
+  background: #383c4a;
+  border-color: #ffb347;
+}
+
 .controls {
   display: flex;
   align-items: center;

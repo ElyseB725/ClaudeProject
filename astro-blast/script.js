@@ -8,6 +8,7 @@ const overlay = document.getElementById("overlay");
 const overlayText = document.getElementById("overlay-text");
 const dpadCenter = document.getElementById("dpad-center");
 const bombBtn = document.getElementById("bomb-btn");
+const characterSelect = document.getElementById("character-select");
 
 const CELL = 32;
 const COLS = canvas.width / CELL;
@@ -19,12 +20,35 @@ const ENEMY_SPEED = 1.5;
 const FUSE_MS = 1800;
 const BLAST_MS = 400;
 const INVINCIBLE_MS = 2000;
+const POWERUP_INVINCIBLE_MS = 10000;
 const BASE_BOMB_RANGE = 1;
 const BASE_MAX_BOMBS = 1;
+const BLOCK_DENSITY = 0.45;
+const POWERUP_DROP_CHANCE = 0.3;
 
 const EMPTY = 0;
 const WALL = 1;
 const BLOCK = 2;
+
+const POWERUP_ICONS = {
+  range: "\u{1F4A5}",
+  bomb: "\u{1F4A3}",
+  life: "\u{2764}\u{FE0F}",
+  invincible: "\u{2B50}",
+};
+
+const PLAYER_ICONS = {
+  boy: "\u{1F468}\u{200D}\u{1F680}",
+  girl: "\u{1F469}\u{200D}\u{1F680}",
+};
+
+const ENEMY_ICONS = [
+  "\u{1F47E}",
+  "\u{1F47D}",
+  "\u{1F419}",
+  "\u{1F991}",
+  "\u{1F9A0}",
+];
 
 const ENEMY_SPAWNS = [
   [COLS - 2, 1],
@@ -35,6 +59,7 @@ const ENEMY_SPAWNS = [
 ];
 
 let grid, player, enemies, bombs, explosions, powerups;
+let playerGender = "boy";
 let score, best, lives, level, running, paused, gameStatus;
 let keys = { up: false, down: false, left: false, right: false };
 let rafId, lastTime;
@@ -56,7 +81,7 @@ function buildGrid() {
       } else if (row % 2 === 0 && col % 2 === 0) {
         r.push(WALL);
       } else {
-        r.push(Math.random() < 0.7 ? BLOCK : EMPTY);
+        r.push(Math.random() < BLOCK_DENSITY ? BLOCK : EMPTY);
       }
     }
     g.push(r);
@@ -96,13 +121,14 @@ function buildLevel() {
   });
 
   const enemyCount = Math.min(2 + level, ENEMY_SPAWNS.length);
-  enemies = ENEMY_SPAWNS.slice(0, enemyCount).map(([col, row]) => {
+  enemies = ENEMY_SPAWNS.slice(0, enemyCount).map(([col, row], i) => {
     if (grid[row][col] !== WALL) grid[row][col] = EMPTY;
     const e = makeEntity(col, row, ENEMY_SIZE);
     return Object.assign(e, {
       dir: randomDir(),
       alive: true,
       changeAt: 0,
+      icon: ENEMY_ICONS[i % ENEMY_ICONS.length],
     });
   });
 }
@@ -208,6 +234,14 @@ function placeBomb() {
   player.escapeRow = row;
 }
 
+function rollPowerupType() {
+  const roll = Math.random();
+  if (roll < 0.4) return "range";
+  if (roll < 0.8) return "bomb";
+  if (roll < 0.9) return "life";
+  return "invincible";
+}
+
 function explodeBomb(bomb) {
   if (bomb.exploded) return;
   bomb.exploded = true;
@@ -224,12 +258,8 @@ function explodeBomb(bomb) {
       cells.push({ col, row });
       if (cell === BLOCK) {
         grid[row][col] = EMPTY;
-        if (Math.random() < 0.2) {
-          powerups.push({
-            col,
-            row,
-            type: Math.random() < 0.5 ? "range" : "bomb",
-          });
+        if (Math.random() < POWERUP_DROP_CHANCE) {
+          powerups.push({ col, row, type: rollPowerupType() });
         }
         break;
       }
@@ -335,9 +365,33 @@ function updatePlayer(now) {
   const row = Math.floor((player.y + player.size / 2) / CELL);
   const picked = powerups.find((p) => p.col === col && p.row === row);
   if (picked) {
-    if (picked.type === "range") player.bombRange = Math.min(player.bombRange + 1, 4);
-    else player.maxBombs = Math.min(player.maxBombs + 1, 3);
+    if (picked.type === "range") {
+      player.bombRange = Math.min(player.bombRange + 1, 4);
+    } else if (picked.type === "bomb") {
+      player.maxBombs = Math.min(player.maxBombs + 1, 3);
+    } else if (picked.type === "life") {
+      lives += 1;
+      livesEl.textContent = lives;
+    } else if (picked.type === "invincible") {
+      player.invincibleUntil = now + POWERUP_INVINCIBLE_MS;
+    }
     powerups = powerups.filter((p) => p !== picked);
+  }
+}
+
+function drawGrass(x, y, col, row) {
+  ctx.fillStyle = "#213a1f";
+  ctx.fillRect(x, y, CELL, CELL);
+  ctx.strokeStyle = "#3c6438";
+  ctx.lineWidth = 1.5;
+  const seed = (col * 31 + row * 17) % 7;
+  for (let i = 0; i < 3; i++) {
+    const bx = x + 6 + ((seed + i * 9) % (CELL - 12));
+    const by = y + CELL - 4;
+    ctx.beginPath();
+    ctx.moveTo(bx, by);
+    ctx.lineTo(bx - 2 + (i % 2) * 4, by - 8 - (i % 3));
+    ctx.stroke();
   }
 }
 
@@ -358,6 +412,8 @@ function draw() {
         ctx.fillRect(x + 1, y + 1, CELL - 2, CELL - 2);
         ctx.strokeStyle = "#7a4128";
         ctx.strokeRect(x + 1, y + 1, CELL - 2, CELL - 2);
+      } else {
+        drawGrass(x, y, col, row);
       }
     }
   }
@@ -368,7 +424,7 @@ function draw() {
 
   powerups.forEach((p) => {
     const c = cellCenter(p.col, p.row);
-    ctx.fillText(p.type === "range" ? "\u{1F4A5}" : "\u{1F4A3}", c.x, c.y);
+    ctx.fillText(POWERUP_ICONS[p.type], c.x, c.y);
   });
 
   bombs.forEach((b) => {
@@ -387,7 +443,7 @@ function draw() {
 
   ctx.font = `${ENEMY_SIZE + 6}px sans-serif`;
   enemies.forEach((e) => {
-    ctx.fillText("\u{1F47E}", e.x + e.size / 2, e.y + e.size / 2);
+    ctx.fillText(e.icon, e.x + e.size / 2, e.y + e.size / 2);
   });
 
   if (player.alive) {
@@ -395,7 +451,7 @@ function draw() {
     const blinking = now < player.invincibleUntil && Math.floor(now / 100) % 2 === 0;
     if (!blinking) {
       ctx.font = `${PLAYER_SIZE + 6}px sans-serif`;
-      ctx.fillText("\u{1F9D1}\u{200D}\u{1F680}", player.x + player.size / 2, player.y + player.size / 2);
+      ctx.fillText(PLAYER_ICONS[playerGender], player.x + player.size / 2, player.y + player.size / 2);
     }
   }
 }
@@ -456,8 +512,10 @@ function endGame(won) {
   }
   if (won) {
     overlayText.innerHTML = `Level ${level} cleared &mdash; score ${score}<br>Press Enter for the next level`;
+    characterSelect.classList.add("hidden");
   } else {
     overlayText.innerHTML = `Game over &mdash; score ${score}<br>Press Enter to play again`;
+    characterSelect.classList.remove("hidden");
   }
   overlay.classList.remove("hidden");
   dpadCenter.textContent = "▶";
@@ -561,6 +619,16 @@ bombBtn.addEventListener("pointerdown", (e) => {
   e.preventDefault();
   placeBomb();
 });
+
+const charButtons = document.querySelectorAll(".char-btn");
+charButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    playerGender = btn.dataset.gender;
+    charButtons.forEach((b) => b.classList.toggle("selected", b === btn));
+    startGame();
+  });
+});
+charButtons[0].classList.add("selected");
 
 gameStatus = "ready";
 running = false;

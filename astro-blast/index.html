@@ -18,7 +18,13 @@
     <div class="board-wrap">
       <canvas id="board" width="480" height="416"></canvas>
       <div id="overlay" class="overlay">
-        <p id="overlay-text">Press Enter to start<br>Blast bricks, dodge aliens, don't get caught in your own bomb</p>
+        <div>
+          <p id="overlay-text">Press Enter to start<br>Blast bricks, dodge aliens, don't get caught in your own bomb</p>
+          <div id="character-select" class="character-select">
+            <button type="button" class="char-btn" data-gender="boy">&#128104;&#8205;&#128640;<span>Boy</span></button>
+            <button type="button" class="char-btn" data-gender="girl">&#128105;&#8205;&#128640;<span>Girl</span></button>
+          </div>
+        </div>
       </div>
     </div>
     <p class="hint">Arrow keys / WASD to move &middot; Space to drop a bomb &middot; P to pause &middot; Enter to restart</p>
